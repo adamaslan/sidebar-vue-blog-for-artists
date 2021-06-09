@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Burger></Burger>
     <Sidebar>
       <ul class="sidebar-panel-nav">
         <li><a href="./myposts">Blog</a></li>
@@ -43,13 +42,11 @@
 </template>
 
 <script>
-import Burger from "../components/Burger.vue";
 import Sidebar from "../components/Sidebar.vue";
 
 export default {
   name: "index",
   components: {
-    Burger,
     Sidebar
   }
 };
@@ -59,6 +56,10 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+}
+.burger {
+  align-content: right;
+  justify-content: right;
 }
 .container2 {
   margin: 0 auto;
