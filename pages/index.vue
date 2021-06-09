@@ -14,7 +14,7 @@
       </div>
     </nav>
 
-    <div>
+    <div class="container2">
       <Logo />
       <h1 class="title">
         Hiii
@@ -59,15 +59,19 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+}
+.container2 {
+  margin: 0 auto;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-
 .logo {
   align-self: center;
-  color: #fff;
+  color: rgb(248, 7, 7);
   font-weight: bold;
   font-family: "Lato";
 }
@@ -77,17 +81,20 @@ export default {
   justify-content: space-between;
   padding: 0.5rem 0.8rem;
 }
-
-.ul.sidebar-panel-nav {
+.sidebar-panel-nav {
   list-style-type: none;
 }
 
-.ul.sidebar-panel-nav > li > a {
-  color: #fff;
+.sidebar-panel-nav li a {
+  color: rgb(19, 180, 14);
   text-decoration: none;
+  list-style-type: ;
   font-size: 1.5rem;
   display: block;
   padding-bottom: 0.5em;
+  color: rgb(248, 7, 7);
+  font-weight: bold;
+  font-family: "Lato";
 }
 
 .title {
@@ -96,7 +103,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #26643b;
   letter-spacing: 1px;
 }
 
