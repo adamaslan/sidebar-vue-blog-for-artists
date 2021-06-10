@@ -10612,10 +10612,10 @@ vue-client-only@^2.0.0:
   resolved "https://registry.yarnpkg.com/vue-client-only/-/vue-client-only-2.1.0.tgz#1a67a47b8ecacfa86d75830173fffee3bf8a4ee3"
   integrity sha512-vKl1skEKn8EK9f8P2ZzhRnuaRHLHrlt1sbRmazlvsx6EiC3A8oWF8YCBrMJzoN+W3OnElwIGbVjsx6/xelY1AA==
 
-vue-easy-lightbox@^1.2.0:
-  version "1.2.0"
-  resolved "https://registry.yarnpkg.com/vue-easy-lightbox/-/vue-easy-lightbox-1.2.0.tgz#f7c29a13b5d04e97590288383c81da4116de80c0"
-  integrity sha512-oSh82PyqkeykasOmo1JtpC1p+Zq2zQObUvY2GfEpHhx0zQyQeHmmfHNivaqxAxphVX3Aaj4H8CvtLGhWcpQQNA==
+vue-easy-lightbox@^0.16.0:
+  version "0.16.0"
+  resolved "https://registry.yarnpkg.com/vue-easy-lightbox/-/vue-easy-lightbox-0.16.0.tgz#f92faf243e58b9d59edae359e31c1f5b2ad7f738"
+  integrity sha512-gEB5fDGqtvsHtNNGkKWRaNBxhhUf1j7MEP8R0/YPQhVRXa10L0c7r9I01IFBDGNL1xDHiPOmb5kDN5WjSEvwPg==
 
 vue-hot-reload-api@^2.3.0:
   version "2.3.4"
