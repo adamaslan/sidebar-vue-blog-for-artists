@@ -75,7 +75,7 @@ export default {
       imgs: [
         "https://via.placeholder.com/250.png/09f/fff?text=first+img",
         "https://via.placeholder.com/250.png/09f/fff?text=second+img",
-        "https://via.placeholder.com/250.png/09f/fff?text=third+img"
+        "../assets/dancing1.jpg"
       ],
       visible: false,
       index: 0 // default
