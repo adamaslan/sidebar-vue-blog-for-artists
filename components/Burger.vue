@@ -42,12 +42,9 @@ button:focus {
 }
 
 .burger-button {
-  position: relative;
-  display: flex;
-  flex-direction: row;
-  align-self: flex-end;
-  align-content: flex-end;
-  justify-items: right;
+  position: absolute;
+  top: 8px;
+  right: 16px;
   height: 30px;
   width: 32px;
   z-index: 999;
