@@ -1,6 +1,5 @@
 <template>
   <div class="container">
-    <Burger></Burger>
     <Sidebar>
       <ul class="sidebar-panel-nav">
         <li><a href="./myposts">Blog</a></li>
@@ -10,55 +9,113 @@
     </Sidebar>
     <nav class="main-nav">
       <div class="logo">
-        my.company
+        Everyone is an Artist
       </div>
     </nav>
 
     <div class="container2">
-      <Logo />
-      <h1 class="title">
-        Hiii
-      </h1>
+      <div class="gallery">
+        <div
+          v-for="(img, idx) in imgs"
+          :key="idx"
+          class="pic"
+          @click="() => show(idx)"
+        >
+          <img :src="img.src ? img.src : img" />
+        </div>
 
-      <div class="links">
-        <a
-          href="./myposts"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          My Posts
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
+        <Logo />
+        <h1 class="title">
+          Hiii
+        </h1>
+
+        <div class="links">
+          <a
+            href="./myposts"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--green"
+          >
+            My Posts
+          </a>
+          <a
+            href="https://github.com/nuxt/nuxt.js"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="button--grey"
+          >
+            GitHub
+          </a>
+        </div>
+        <client-only>
+          <vue-easy-lightbox
+            :visible="visible"
+            :index="index"
+            :imgs="imgs"
+            @hide="visible = false"
+            @on-prev="handlePrev"
+            @on-next="handleNext"
+          />
+        </client-only>
       </div>
     </div>
   </div>
 </template>
 
 <script>
-import Burger from "../components/Burger.vue";
 import Sidebar from "../components/Sidebar.vue";
 
 export default {
   name: "index",
   components: {
-    Burger,
     Sidebar
+  },
+  data() {
+    return {
+      imgs: [
+        "https://via.placeholder.com/250.png/09f/fff?text=first+img",
+        "https://via.placeholder.com/250.png/09f/fff?text=second+img",
+        "https://via.placeholder.com/250.png/09f/fff?text=third+img"
+      ],
+      visible: false,
+      index: 0 // default
+    };
+  },
+  methods: {
+    show(index) {
+      this.index = index;
+      this.visible = true;
+    },
+    handlePrev(oldIndex, newIndex) {
+      console.log("when next btn click ----");
+      console.log("oldIndex of imgs:", oldIndex);
+      console.log("newIndex of imgs:", newIndex);
+    },
+    handleNext(oldIndex, newIndex) {
+      console.log("when next btn click ----");
+      console.log("oldIndex of imgs:", oldIndex);
+      console.log("newIndex of imgs:", newIndex);
+      if (newIndex === this.imgs.length - 1) {
+        this.addImg();
+      }
+    },
+    addImg() {
+      this.imgs.push(
+        "https://via.placeholder.com/250.png/00a26e/fff?text=new+img"
+      );
+    }
   }
 };
 </script>
-
+//list-styletype -> .sidebar-panel-nav li a
 <style>
 .container {
   margin: 0 auto;
   min-height: 100vh;
+}
+.burger {
+  align-content: right;
+  justify-content: right;
 }
 .container2 {
   margin: 0 auto;
@@ -84,11 +141,10 @@ export default {
 .sidebar-panel-nav {
   list-style-type: none;
 }
-
 .sidebar-panel-nav li a {
   color: rgb(19, 180, 14);
   text-decoration: none;
-  list-style-type: ;
+
   font-size: 1.5rem;
   display: block;
   padding-bottom: 0.5em;
@@ -117,5 +173,13 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.gallery {
+  display: flex;
+}
+.pic {
+  cursor: pointer;
+  margin-right: 8px;
 }
 </style>

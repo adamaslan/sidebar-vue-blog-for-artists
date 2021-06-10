@@ -42,10 +42,11 @@ button:focus {
 }
 
 .burger-button {
-  position: relative;
+  position: absolute;
+  top: 8px;
+  right: 16px;
   height: 30px;
   width: 32px;
-  display: block;
   z-index: 999;
   border: 0;
   border-radius: 0;
