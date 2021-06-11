@@ -75,7 +75,7 @@ export default {
       imgs: [
         "http://placekitten.com/800/600",
         "https://via.placeholder.com/250.png/09f/fff?text=second+img",
-        "dancing1.jpg"
+        "/assets/dancing1.jpg"
       ],
       visible: false,
       index: 0 // default
