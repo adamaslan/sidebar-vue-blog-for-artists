@@ -73,9 +73,9 @@ export default {
   data() {
     return {
       imgs: [
-        "https://via.placeholder.com/250.png/09f/fff?text=first+img",
+        "http://placekitten.com/800/600",
         "https://via.placeholder.com/250.png/09f/fff?text=second+img",
-        "../assets/dancing1.jpg"
+        "dancing1.jpg"
       ],
       visible: false,
       index: 0 // default
