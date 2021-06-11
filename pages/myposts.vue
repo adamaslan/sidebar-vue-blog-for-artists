@@ -38,6 +38,7 @@
           GitHub
         </a>
       </div>
+      <img src="../assets/dancing1.jpg" class="imgfun" />
     </div>
   </div>
 </template>
@@ -64,7 +65,9 @@ export default {
   align-items: center;
   text-align: center;
 }
-
+.imgfun {
+  width: 200px;
+}
 .logo {
   align-self: center;
   color: #fff;
