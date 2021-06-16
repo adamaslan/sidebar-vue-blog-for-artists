@@ -74,8 +74,8 @@ export default {
     return {
       imgs: [
         "http://placekitten.com/800/600",
-        "https://via.placeholder.com/250.png/09f/fff?text=second+img",
-        "/assets/dancing1.jpg"
+        "~/assets/dancing1.jpg",
+        "https://via.placeholder.com/250.png/09f/fff?text=second+img"
       ],
       visible: false,
       index: 0 // default
@@ -93,8 +93,8 @@ export default {
     },
     handleNext(oldIndex, newIndex) {
       console.log("when next btn click ----");
-      console.log("oldIndex of imgs:", oldIndex);
-      console.log("newIndex of imgs:", newIndex);
+      console.log("oldIndex of imgs:2", oldIndex);
+      console.log("newIndex of imgs: 3", newIndex);
       if (newIndex === this.imgs.length - 1) {
         this.addImg();
       }
@@ -116,6 +116,9 @@ export default {
 .burger {
   align-content: right;
   justify-content: right;
+}
+.imgfun {
+  width: 200px;
 }
 .container2 {
   margin: 0 auto;

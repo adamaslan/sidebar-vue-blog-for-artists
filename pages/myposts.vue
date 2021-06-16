@@ -38,7 +38,7 @@
           GitHub
         </a>
       </div>
-      <img src="../assets/dancing1.jpg" class="imgfun" />
+      <img src="~/assets/dancing1.jpg" class="imgfun" />
     </div>
   </div>
 </template>
