@@ -69,13 +69,13 @@ import Sidebar from "../components/Sidebar.vue";
 // Here is the usage in <script /> , which is the same as in `.js`.
 
 // way1:
-import DancingImgUrl from "../assets/dancing1.jpg"
+import DancingImgUrl from "../assets/dancing1.jpg";
 // way2:
-const GratefulUrl = require("~/assets/grateful1.jpg")
+const GratefulUrl = require("~/assets/grateful1.jpg");
 
 // Compare the log results with the local path.
-console.log(DancingImgUrl)
-console.log(GratefulUrl)
+console.log(DancingImgUrl);
+console.log(GratefulUrl);
 
 export default {
   name: "index",
@@ -106,8 +106,8 @@ export default {
     },
     handleNext(oldIndex, newIndex) {
       console.log("when next btn click ----");
-      console.log("oldIndex of imgs:2", oldIndex);
-      console.log("newIndex of imgs: 3", newIndex);
+      console.log("oldIndex of imgs:", oldIndex);
+      console.log("newIndex of imgs: ", newIndex);
       if (newIndex === this.imgs.length - 1) {
         this.addImg();
       }
@@ -193,6 +193,8 @@ export default {
 
 .gallery {
   display: flex;
+  flex-direction: column;
+  margin: 0 auto;
 }
 
 .pic {
