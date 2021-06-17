@@ -65,6 +65,18 @@
 <script>
 import Sidebar from "../components/Sidebar.vue";
 
+// Importing images to generate URL is a feature of webpack's loader.
+// Here is the usage in <script /> , which is the same as in `.js`.
+
+// way1:
+import DancingImgUrl from "../assets/dancing1.jpg"
+// way2:
+const GratefulUrl = require("~/assets/grateful1.jpg")
+
+// Compare the log results with the local path.
+console.log(DancingImgUrl)
+console.log(GratefulUrl)
+
 export default {
   name: "index",
   components: {
@@ -74,7 +86,8 @@ export default {
     return {
       imgs: [
         "http://placekitten.com/800/600",
-        "~/assets/dancing1.jpg",
+        DancingImgUrl,
+        GratefulUrl,
         "https://via.placeholder.com/250.png/09f/fff?text=second+img"
       ],
       visible: false,
@@ -181,8 +194,15 @@ export default {
 .gallery {
   display: flex;
 }
+
 .pic {
   cursor: pointer;
+  max-width: 300px;
+  max-height: 300px;
   margin-right: 8px;
+}
+
+.pic img {
+  width: 100%;
 }
 </style>
