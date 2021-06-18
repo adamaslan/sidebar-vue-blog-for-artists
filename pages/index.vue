@@ -130,9 +130,7 @@ export default {
   align-content: right;
   justify-content: right;
 }
-.imgfun {
-  width: 200px;
-}
+
 .container2 {
   margin: 0 auto;
   min-height: 100vh;
@@ -194,17 +192,19 @@ export default {
 .gallery {
   display: flex;
   flex-direction: column;
-  margin: 0 auto;
+  margin: 20px auto;
 }
 
 .pic {
   cursor: pointer;
   max-width: 300px;
   max-height: 300px;
-  margin-right: 8px;
+  margin: 35px auto;
+  padding: 20px;
 }
 
 .pic img {
   width: 100%;
+  padding-top: 10px;
 }
 </style>
