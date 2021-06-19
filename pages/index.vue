@@ -24,11 +24,10 @@
           <img :src="img.src ? img.src : img" />
         </div>
 
-        <Logo />
         <h1 class="title">
           Hiii
         </h1>
-
+        <Logo />
         <div class="links">
           <a
             href="./myposts"
@@ -72,7 +71,9 @@ import Sidebar from "../components/Sidebar.vue";
 import DancingImgUrl from "../assets/dancing1.jpg";
 // way2:
 const GratefulUrl = require("~/assets/grateful1.jpg");
+const PostMasc1 = require("~/assets/postmasc1.jpg");
 
+const Inherent = require("~/assets/inherent.jpg");
 // Compare the log results with the local path.
 console.log(DancingImgUrl);
 console.log(GratefulUrl);
@@ -84,12 +85,7 @@ export default {
   },
   data() {
     return {
-      imgs: [
-        "http://placekitten.com/800/600",
-        DancingImgUrl,
-        GratefulUrl,
-        "https://via.placeholder.com/250.png/09f/fff?text=second+img"
-      ],
+      imgs: [DancingImgUrl, GratefulUrl, PostMasc1, Inherent],
       visible: false,
       index: 0 // default
     };
