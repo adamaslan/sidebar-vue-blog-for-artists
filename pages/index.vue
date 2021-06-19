@@ -69,11 +69,17 @@ import Sidebar from "../components/Sidebar.vue";
 
 // way1:
 import DancingImgUrl from "../assets/dancing1.jpg";
+import Unity from "../assets/unity.jpg";
+import Progress from "../assets/progress.jpg";
+
+import Judee from "../assets/judee.jpg";
+
 // way2:
 const GratefulUrl = require("~/assets/grateful1.jpg");
 const PostMasc1 = require("~/assets/postmasc1.jpg");
 
 const Inherent = require("~/assets/inherent.jpg");
+
 // Compare the log results with the local path.
 console.log(DancingImgUrl);
 console.log(GratefulUrl);
@@ -85,7 +91,15 @@ export default {
   },
   data() {
     return {
-      imgs: [DancingImgUrl, GratefulUrl, PostMasc1, Inherent],
+      imgs: [
+        DancingImgUrl,
+        GratefulUrl,
+        PostMasc1,
+        Inherent,
+        Judee,
+        Unity,
+        Progress
+      ],
       visible: false,
       index: 0 // default
     };
@@ -188,13 +202,13 @@ export default {
 .gallery {
   display: flex;
   flex-direction: column;
-  margin: 20px auto;
+  margin: 0 auto;
 }
 
 .pic {
   cursor: pointer;
-  max-width: 300px;
-  max-height: 300px;
+  max-width: 700px;
+
   margin: 35px auto;
   padding: 20px;
 }
