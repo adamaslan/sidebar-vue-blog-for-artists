@@ -93,6 +93,7 @@ export default {
     return {
       imgs: [
         DancingImgUrl,
+        { title: "hiii" },
         GratefulUrl,
         PostMasc1,
         Inherent,
@@ -118,14 +119,6 @@ export default {
       console.log("when next btn click ----");
       console.log("oldIndex of imgs:", oldIndex);
       console.log("newIndex of imgs: ", newIndex);
-      if (newIndex === this.imgs.length - 1) {
-        this.addImg();
-      }
-    },
-    addImg() {
-      this.imgs.push(
-        "https://via.placeholder.com/250.png/00a26e/fff?text=new+img"
-      );
     }
   }
 };
