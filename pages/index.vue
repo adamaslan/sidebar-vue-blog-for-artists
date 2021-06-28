@@ -92,10 +92,17 @@ export default {
   data() {
     return {
       imgs: [
-        DancingImgUrl,
-        { title: "hiii" },
+        {
+          src: DancingImgUrl,
+          title: "Artist: Adam Aslan Title: 'Dancing' ",
+          description: "this is an XY graph."
+        },
         GratefulUrl,
-        PostMasc1,
+        {
+          src: PostMasc1,
+          title: "The postmasculine identity",
+          description: "this is an XY graph."
+        },
         Inherent,
         Judee,
         Unity,
