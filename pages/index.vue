@@ -103,10 +103,10 @@ export default {
           title: "The postmasculine identity",
           description: "this is an XY graph."
         },
-        Inherent,
-        Judee,
-        Unity,
-        Progress
+        { src: Inherent, title: "What makes Order Inherent?" },
+        { src: Judee, title: "Judee Sill" },
+        { src: Unity, title: "Unity and Individuality" },
+        { src: Progress, title: "Definition of Progress" }
       ],
       visible: false,
       index: 0 // default
@@ -139,6 +139,16 @@ export default {
 .burger {
   align-content: right;
   justify-content: right;
+}
+
+.vel-img-title {
+  font-size: 144 px;
+  display: block;
+  padding-bottom: 0.5em;
+  color: rgb(248, 7, 7);
+  font-color: rgb (248, 6, 6);
+  font-family: "courier";
+  background-color: #526488;
 }
 
 .container2 {
