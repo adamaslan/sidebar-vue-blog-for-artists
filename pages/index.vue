@@ -143,12 +143,22 @@ export default {
 
 .vel-img-title {
   font-size: 144 px;
-  display: block;
-  padding-bottom: 0.5em;
-  color: rgb(248, 7, 7);
-  font-color: rgb (248, 6, 6);
+  padding: 1em;
+  color: rgb(248, 7, 10);
   font-family: "courier";
   background-color: #526488;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.vel-img-title:hover {
+  transform: scale(2.1);
 }
 
 .container2 {
