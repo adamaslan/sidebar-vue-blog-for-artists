@@ -143,10 +143,10 @@ export default {
 
 .vel-img-title {
   font-size: 144 px;
-  padding: 1em;
+  padding: 5em;
   color: rgb(248, 7, 10);
   font-family: "courier";
-  background-color: #526488;
+  background-color: #000000;
   display: inline-block;
   vertical-align: middle;
   transform: translateZ(0);
