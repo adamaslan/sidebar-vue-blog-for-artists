@@ -39,7 +39,7 @@ export default {
 }
 
 .sidebar-backdrop {
-  background-color: rgba(241, 7, 7, 0.5);
+  background-color: rgba(151, 113, 113, 0.5);
   width: 100vw;
   height: 100vh;
   position: fixed;
@@ -50,7 +50,7 @@ export default {
 
 .sidebar-panel {
   overflow-y: auto;
-  background-color: #a30774;
+  background-color: #a31010;
   position: fixed;
   left: 0;
   top: 0;
