@@ -19,7 +19,39 @@
           <li><a href="#contact">Contact</a></li>
         </ul>
       </Sidebar>
+      <div>
+        <section class="hero is-primary has-text-centered">
+          <div class="hero-body">
+            <div class="container">
+              <h1 class="title">
+                Tech Blog
+              </h1>
+              <h2 class="subtitle">
+                An awesome tech blog
+              </h2>
+            </div>
+          </div>
+        </section>
 
+        <section class="section">
+          <div class="container">
+            <div class="columns">
+              <div class="column is-three-fifths is-offset-one-fifth">
+                <div v-for="page in pages" :key="page.slug" class="mb-5">
+                  <h3 class="title is-4">
+                    <nuxt-link :to="page.slug">
+                      {{ page.title }}
+                    </nuxt-link>
+                  </h3>
+                  <div>
+                    {{ page.description }}
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
       <div class="links">
         <a
           href="https://nuxtjs.org/"
