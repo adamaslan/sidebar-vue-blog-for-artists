@@ -2,7 +2,7 @@
   <div class="container">
     <Sidebar>
       <ul class="sidebar-panel-nav">
-        <li><a href="./myposts">Blog</a></li>
+        <li><a href="./myposts/">Blog-on-down</a></li>
         <li><a href="#about">About</a></li>
         <li><a href="#contact">Contact</a></li>
       </ul>
@@ -192,7 +192,7 @@ export default {
   font-size: 1.5rem;
   display: block;
   padding-bottom: 0.5em;
-  color: rgb(248, 7, 7);
+  color: rgb(24, 7, 7);
   font-weight: bold;
   font-family: "Lato";
 }
