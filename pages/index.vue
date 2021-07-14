@@ -9,7 +9,7 @@
     </Sidebar>
     <nav class="main-nav">
       <div class="logo">
-        Everyone is an Artist
+        Art is Everywhere
       </div>
     </nav>
 
