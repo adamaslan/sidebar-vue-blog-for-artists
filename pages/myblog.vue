@@ -24,10 +24,10 @@
           <div class="hero-body">
             <div class="container">
               <h1 class="title">
-                Tech Blog
+                Bloggy Blog
               </h1>
               <h2 class="subtitle">
-                An awesome tech blog
+                An awesome blog blog dawg
               </h2>
             </div>
           </div>
@@ -92,17 +92,48 @@ export default {
 .container {
   margin: 0 auto;
   min-height: 100vh;
+}
+.burger {
+  align-content: right;
+  justify-content: right;
+}
+
+.imgfun {
+  width: 20%;
+}
+
+.vel-img-title {
+  font-size: 144 px;
+  padding: 5em;
+  color: rgb(31, 16, 16);
+  font-family: "courier";
+  background-color: #000000;
+  display: inline-block;
+  vertical-align: middle;
+  transform: translateZ(0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  backface-visibility: hidden;
+  -moz-osx-font-smoothing: grayscale;
+  transition-duration: 0.3s;
+  transition-property: transform;
+}
+
+.vel-img-title:hover {
+  transform: scale(2.1);
+}
+
+.container2 {
+  margin: 0 auto;
+  min-height: 100vh;
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
   text-align: center;
 }
-.imgfun {
-  width: 200px;
-}
 .logo {
   align-self: center;
-  color: #fff;
+  color: rgb(248, 7, 7);
   font-weight: bold;
   font-family: "Lato";
 }
@@ -112,17 +143,19 @@ export default {
   justify-content: space-between;
   padding: 0.5rem 0.8rem;
 }
-
-.ul.sidebar-panel-nav {
+.sidebar-panel-nav {
   list-style-type: none;
 }
-
-.ul.sidebar-panel-nav > li > a {
-  color: #fff;
+.sidebar-panel-nav li a {
+  color: rgb(19, 180, 14);
   text-decoration: none;
+
   font-size: 1.5rem;
   display: block;
   padding-bottom: 0.5em;
+  color: rgb(24, 7, 7);
+  font-weight: bold;
+  font-family: "Lato";
 }
 
 .title {
@@ -131,7 +164,7 @@ export default {
   display: block;
   font-weight: 300;
   font-size: 100px;
-  color: #35495e;
+  color: #26643b;
   letter-spacing: 1px;
 }
 
@@ -145,5 +178,24 @@ export default {
 
 .links {
   padding-top: 15px;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.pic {
+  cursor: pointer;
+  max-width: 700px;
+
+  margin: 35px auto;
+  padding: 20px;
+}
+
+.pic img {
+  width: 100%;
+  padding-top: 10px;
 }
 </style>
