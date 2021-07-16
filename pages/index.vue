@@ -2,9 +2,9 @@
   <div class="container">
     <Sidebar>
       <ul class="sidebar-panel-nav">
-        <li><a href="./myblog/">Blog-on-down</a></li>
+        <li><a href="./blog/">Blog-on-down</a></li>
         <li><a href="./about/">About</a></li>
-        <li><a href="#contact">Contact</a></li>
+        <li><a href="./posts/">Posts</a></li>
       </ul>
     </Sidebar>
     <nav class="main-nav">
@@ -30,7 +30,7 @@
         <Logo />
         <div class="links">
           <a
-            href="./myposts"
+            href="./blog"
             target="_blank"
             rel="noopener noreferrer"
             class="button--green"

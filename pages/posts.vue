@@ -1,8 +1,10 @@
+//Posts.vue
+
 <template>
   <div class="container">
     <nav class="main-nav">
       <div class="logo">
-        my.company
+        Blog Pain
       </div>
       <Burger></Burger>
     </nav>
@@ -14,63 +16,11 @@
       </h1>
       <Sidebar>
         <ul class="sidebar-panel-nav">
-          <li><a href="#home">Home</a></li>
+          <li><a href="./">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
       </Sidebar>
-      <div>
-        <section class="hero is-primary has-text-centered">
-          <div class="hero-body">
-            <div class="container">
-              <h1 class="title">
-                Bloggy Blog
-              </h1>
-              <h2 class="subtitle">
-                An awesome blog blog dawg
-              </h2>
-            </div>
-          </div>
-        </section>
-
-        <section class="section">
-          <div class="container">
-            <div class="columns">
-              <div class="column is-three-fifths is-offset-one-fifth">
-                <div v-for="page in pages" :key="page.slug" class="mb-5">
-                  <h3 class="title is-4">
-                    <nuxt-link :to="page.slug">
-                      {{ page.title }}
-                    </nuxt-link>
-                  </h3>
-                  <div>
-                    {{ page.description }}
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-        </section>
-      </div>
-      <div class="links">
-        <a
-          href="https://nuxtjs.org/"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--green"
-        >
-          Documentation
-        </a>
-        <a
-          href="https://github.com/nuxt/nuxt.js"
-          target="_blank"
-          rel="noopener noreferrer"
-          class="button--grey"
-        >
-          GitHub
-        </a>
-      </div>
-      <img src="~/assets/dancing1.jpg" class="imgfun" />
     </div>
   </div>
 </template>
@@ -84,6 +34,20 @@ export default {
   components: {
     Burger,
     Sidebar
+  }
+};
+</script>
+<script>
+export default {
+  async asyncData({ $content, params }) {
+    const pages = await $content("pages")
+      .only(["title", "description", "slug"])
+      .sortBy("createdAt", "asc")
+      .fetch();
+
+    return {
+      pages
+    };
   }
 };
 </script>
@@ -199,3 +163,11 @@ export default {
   padding-top: 10px;
 }
 </style>
+
+<nuxt-link
+  :key="page.path"
+  :to="page.path === '/info/index' ? '/info' : page.path"
+  class="menu-link"
+>
+                    {{ page.title }}
+                </nuxt-link>
