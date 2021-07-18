@@ -16,7 +16,7 @@
       </h1>
       <Sidebar>
         <ul class="sidebar-panel-nav">
-          <li><a href="./">Home</a></li>
+          <li><a href="/">Home</a></li>
           <li><a href="#about">About</a></li>
           <li><a href="#contact">Contact</a></li>
         </ul>
@@ -34,20 +34,6 @@ export default {
   components: {
     Burger,
     Sidebar
-  }
-};
-</script>
-<script>
-export default {
-  async asyncData({ $content, params }) {
-    const pages = await $content("pages")
-      .only(["title", "description", "slug"])
-      .sortBy("createdAt", "asc")
-      .fetch();
-
-    return {
-      pages
-    };
   }
 };
 </script>
